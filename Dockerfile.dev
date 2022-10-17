@@ -1,0 +1,9 @@
+# syntax=docker/dockerfile:1
+
+FROM webdevops/php-dev:8.1
+
+ENV DEBUG "true"
+
+# Add on-start commands
+RUN echo '# Composer oprations' >> /opt/docker/provision/entrypoint.d/99-composer.sh \
+ && echo 'gosu "${APPLICATION_USER}" composer install -d /app' >> /opt/docker/provision/entrypoint.d/99-composer.sh
