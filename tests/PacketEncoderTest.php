@@ -164,7 +164,7 @@ final class PacketEncoderTest extends TestCase
      */
     public function testRfc2865Section73InvalidAttributeLengthPacket()
     {
-        $this->setExpectedException(InvalidLengthException::class);
+        $this->expectException(InvalidLengthException::class);
 
         $secret = 'xyzzy5461';
         $encoder = new PacketEncoder();

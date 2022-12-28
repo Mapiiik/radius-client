@@ -40,7 +40,7 @@ final class DateAttributeTest extends TestCase
      */
     public function testEncodeInvalidArgument()
     {
-        $this->setExpectedException(InvalidArgumentException::class);
+        $this->expectException(InvalidArgumentException::class);
 
         $foobar = 'foobar';
 
