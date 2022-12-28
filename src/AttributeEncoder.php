@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of boo/radius.
+ * This file is part of mapik/radius-client.
  *
  * (c) Jonas Stendahl <jonas@stendahl.me>
  *
@@ -9,11 +9,11 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Boo\Radius;
+namespace Mapik\RadiusClient;
 
-use Boo\Radius\Attributes\AttributeInterface;
-use Boo\Radius\Exceptions\AttributeException;
-use Boo\Radius\Exceptions\InvalidLengthException;
+use Mapik\RadiusClient\Attributes\AttributeInterface;
+use Mapik\RadiusClient\Exceptions\AttributeException;
+use Mapik\RadiusClient\Exceptions\InvalidLengthException;
 
 final class AttributeEncoder
 {

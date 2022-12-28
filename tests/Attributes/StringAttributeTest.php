@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of boo/radius.
+ * This file is part of mapik/radius-client.
  *
  * (c) Jonas Stendahl <jonas@stendahl.me>
  *
@@ -9,15 +9,15 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Boo\Radius\Tests\Attributes;
+namespace Mapik\RadiusClient\Tests\Attributes;
 
-use Boo\Radius\Attributes\StringAttribute;
-use Boo\Radius\Exceptions\InvalidArgumentException;
+use Mapik\RadiusClient\Attributes\StringAttribute;
+use Mapik\RadiusClient\Exceptions\InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 
 /**
  * @internal
- * @covers \Boo\Radius\Attributes\StringAttribute
+ * @covers \Mapik\RadiusClient\Attributes\StringAttribute
  */
 final class StringAttributeTest extends TestCase
 {

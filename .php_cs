@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of boo/radius.
+ * This file is part of mapik/radius-client.
  *
  * (c) Jonas Stendahl <jonas@stendahl.me>
  *
@@ -9,13 +9,13 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Boo\Radius;
+namespace Mapik\RadiusClient;
 
 use PhpCsFixer\Config;
 use PhpCsFixer\Finder;
 
 $header = <<<'EOT'
-This file is part of boo/radius.
+This file is part of mapik/radius-client.
 
 (c) Jonas Stendahl <jonas@stendahl.me>
 

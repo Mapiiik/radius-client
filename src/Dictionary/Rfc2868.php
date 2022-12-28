@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of boo/radius.
+ * This file is part of mapik/radius-client.
  *
  * (c) Jonas Stendahl <jonas@stendahl.me>
  *
@@ -9,10 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Boo\Radius\Dictionary;
+namespace Mapik\RadiusClient\Dictionary;
 
-use Boo\Radius\Attributes;
-use Boo\Radius\DictionaryInterface;
+use Mapik\RadiusClient\Attributes;
+use Mapik\RadiusClient\DictionaryInterface;
 
 final class Rfc2868 implements DictionaryInterface
 {

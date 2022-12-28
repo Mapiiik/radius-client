@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of boo/radius.
+ * This file is part of mapik/radius-client.
  *
  * (c) Jonas Stendahl <jonas@stendahl.me>
  *
@@ -9,15 +9,15 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Boo\Radius\Tests\Attributes;
+namespace Mapik\RadiusClient\Tests\Attributes;
 
-use Boo\Radius\Attributes\DateAttribute;
-use Boo\Radius\Exceptions\InvalidArgumentException;
+use Mapik\RadiusClient\Attributes\DateAttribute;
+use Mapik\RadiusClient\Exceptions\InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 
 /**
  * @internal
- * @covers \Boo\Radius\Attributes\DateAttribute
+ * @covers \Mapik\RadiusClient\Attributes\DateAttribute
  */
 final class DateAttributeTest extends TestCase
 {

@@ -8,7 +8,7 @@
          beStrictAboutOutputDuringTests="true"
          beStrictAboutTestsThatDoNotTestAnything="true"
 >
-    <testsuite name="boo/radius tests">
+    <testsuite name="mapik/radius-client tests">
         <directory>./tests</directory>
     </testsuite>
     <filter>

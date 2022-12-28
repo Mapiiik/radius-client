@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of boo/radius.
+ * This file is part of mapik/radius-client.
  *
  * (c) Jonas Stendahl <jonas@stendahl.me>
  *
@@ -9,9 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Boo\Radius;
+namespace Mapik\RadiusClient;
 
-use Boo\Radius\Exceptions\AttributeException;
+use Mapik\RadiusClient\Exceptions\AttributeException;
 
 final class Packet
 {

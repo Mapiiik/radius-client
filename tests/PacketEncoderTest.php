@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of boo/radius.
+ * This file is part of mapik/radius-client.
  *
  * (c) Jonas Stendahl <jonas@stendahl.me>
  *
@@ -9,20 +9,20 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Boo\Radius\Tests;
+namespace Mapik\RadiusClient\Tests;
 
-use Boo\Radius\AttributeEncoder;
-use Boo\Radius\Dictionary;
-use Boo\Radius\Exceptions\InvalidLengthException;
-use Boo\Radius\Exceptions\RadiusException;
-use Boo\Radius\Packet;
-use Boo\Radius\PacketEncoder;
-use Boo\Radius\PacketType;
+use Mapik\RadiusClient\AttributeEncoder;
+use Mapik\RadiusClient\Dictionary;
+use Mapik\RadiusClient\Exceptions\InvalidLengthException;
+use Mapik\RadiusClient\Exceptions\RadiusException;
+use Mapik\RadiusClient\Packet;
+use Mapik\RadiusClient\PacketEncoder;
+use Mapik\RadiusClient\PacketType;
 use PHPUnit\Framework\TestCase;
 
 /**
  * @internal
- * @covers \Boo\Radius\PacketEncoder
+ * @covers \Mapik\RadiusClient\PacketEncoder
  */
 final class PacketEncoderTest extends TestCase
 {
@@ -86,7 +86,7 @@ final class PacketEncoderTest extends TestCase
         ], $packet->getAuthenticator(), $packet->getIdentifier());
 
         $this->assertSame($response, $encoder->encode($packet));
-        $this->assertTrue(\Boo\Radius\is_authentic_response($request, $response, $secret));
+        $this->assertTrue(\Mapik\RadiusClient\is_authentic_response($request, $response, $secret));
     }
 
     /**
@@ -120,7 +120,7 @@ final class PacketEncoderTest extends TestCase
         ], $packet->getAuthenticator(), $packet->getIdentifier());
 
         $this->assertSame($response, $encoder->encode($packet));
-        $this->assertTrue(\Boo\Radius\is_authentic_response($request, $response, $secret));
+        $this->assertTrue(\Mapik\RadiusClient\is_authentic_response($request, $response, $secret));
     }
 
     /**
@@ -149,14 +149,14 @@ final class PacketEncoderTest extends TestCase
         ], $packet->getAuthenticator(), $packet->getIdentifier());
 
         $this->assertSame($response, $encoder->encode($packet));
-        $this->assertTrue(\Boo\Radius\is_authentic_response($request, $response, $secret));
+        $this->assertTrue(\Mapik\RadiusClient\is_authentic_response($request, $response, $secret));
 
         $request = "\x01\x03\x00\x43\xb1\x22\x55\x6d\x42\x8a\x13\xd0\xd6\x25\x38\x07\xc4\x57\xec\xf0\x01\x07\x6d\x6f\x70\x73\x79\x02\x12\x69\x2c\x1f\x20\x5f\xc0\x81\xb9\x19\xb9\x51\x95\xf5\x61\xa5\x81\x04\x06\xc0\xa8\x01\x10\x05\x06\x00\x00\x00\x07\x18\x10\x33\x32\x37\x36\x39\x34\x33\x30";
         $response = "\x03\x03\x00\x14\xa4\x2f\x4f\xca\x45\x91\x6c\x4e\x09\xc8\x34\x0f\x9e\x74\x6a\xa0";
         $packet = new Packet(PacketType::ACCESS_REJECT(), $secret, [], "\xb1\x22\x55\x6d\x42\x8a\x13\xd0\xd6\x25\x38\x07\xc4\x57\xec\xf0", 3);
 
         $this->assertSame($response, $encoder->encode($packet));
-        $this->assertTrue(\Boo\Radius\is_authentic_response($request, $response, $secret));
+        $this->assertTrue(\Mapik\RadiusClient\is_authentic_response($request, $response, $secret));
     }
 
     /**

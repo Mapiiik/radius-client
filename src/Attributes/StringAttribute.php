@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of boo/radius.
+ * This file is part of mapik/radius-client.
  *
  * (c) Jonas Stendahl <jonas@stendahl.me>
  *
@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Boo\Radius\Attributes;
+namespace Mapik\RadiusClient\Attributes;
 
 final class StringAttribute implements AttributeInterface
 {
