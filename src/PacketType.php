@@ -29,6 +29,8 @@ use MabeEnum\Enum;
  * @method static PacketType COA_ACK()
  * @method static PacketType COA_NAK()
  * @method static PacketType RESERVED()
+ * 
+ * @psalm-immutable
  */
 final class PacketType extends Enum
 {

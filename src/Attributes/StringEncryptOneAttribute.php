@@ -20,12 +20,12 @@ final class StringEncryptOneAttribute implements AttributeInterface
      *
      * @return string
      */
-    public static function decode($value, $authenticator, $secret, array $options = null)
+    public static function decode($message, $authenticator, $secret, array $options = null)
     {
-        $valueLength = strlen($value);
+        $messageLength = strlen($message);
 
-        if ($valueLength < 16 || $valueLength > 128) {
-            throw new InvalidArgumentException('The value must be between 16 and 128 characters');
+        if ($messageLength < 16 || $messageLength > 128) {
+            throw new InvalidArgumentException('The messageLength must be between 16 and 128 characters');
         }
 
         if ('' === $secret) {
@@ -37,13 +37,13 @@ final class StringEncryptOneAttribute implements AttributeInterface
         }
 
         $password = md5($secret.$authenticator, true);
-        $parts = str_split($value, 16);
+        $parts = str_split($message, 16);
 
         foreach (str_split($parts[0], 1) as $i => $character) {
             $password[$i] = $password[$i] ^ $character;
         }
 
-        for ($i = 1; $i * 16 < $valueLength; ++$i) {
+        for ($i = 1; $i * 16 < $messageLength; ++$i) {
             $password .= md5($secret.$parts[$i - 1], true);
 
             foreach (str_split($parts[$i], 1) as $j => $character) {

@@ -155,6 +155,8 @@ final class AttributeEncoder
 
     /**
      * @param DictionaryInterface $dictionary
+     * 
+     * @return void
      */
     public function registerDictionary(DictionaryInterface $dictionary)
     {

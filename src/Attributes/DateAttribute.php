@@ -24,7 +24,7 @@ final class DateAttribute implements AttributeInterface
     {
         $timestamp = array_sum(unpack('N', $message));
 
-        return \DateTimeImmutable::createFromFormat('U', $timestamp);
+        return \DateTimeImmutable::createFromFormat('U', strval($timestamp));
     }
 
     /**

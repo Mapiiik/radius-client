@@ -20,7 +20,7 @@ final class IntegerAttribute implements AttributeInterface
      */
     public static function decode($message, $authenticator, $secret, array $options = null)
     {
-        return array_sum(unpack('N', $message));
+        return intval(array_sum(unpack('N', $message)));
     }
 
     /**

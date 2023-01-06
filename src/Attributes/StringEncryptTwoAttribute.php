@@ -20,14 +20,14 @@ final class StringEncryptTwoAttribute implements AttributeInterface
      *
      * @return string
      */
-    public static function decode($value, $authenticator, $secret, array $options = null)
+    public static function decode($message, $authenticator, $secret, array $options = null)
     {
-        $salt = substr($value, 0, 2);
-        $value = substr($value, 2);
-        $valueLength = strlen($value);
+        $salt = substr($message, 0, 2);
+        $message = substr($message, 2);
+        $messageLength = strlen($message);
 
-        if ($valueLength < 16 || $valueLength > 128) {
-            throw new InvalidArgumentException('The value must be between 16 and 128 characters');
+        if ($messageLength < 16 || $messageLength > 128) {
+            throw new InvalidArgumentException('The message must be between 16 and 128 characters');
         }
 
         if ('' === $secret) {
@@ -39,13 +39,13 @@ final class StringEncryptTwoAttribute implements AttributeInterface
         }
 
         $password = md5($secret.$authenticator.$salt, true);
-        $parts = str_split($value, 16);
+        $parts = str_split($message, 16);
 
         foreach (str_split($parts[0], 1) as $i => $character) {
             $password[$i] = $password[$i] ^ $character;
         }
 
-        for ($i = 1; $i * 16 < $valueLength; ++$i) {
+        for ($i = 1; $i * 16 < $messageLength; ++$i) {
             $password .= md5($secret.$parts[$i - 1], true);
 
             foreach (str_split($parts[$i], 1) as $j => $character) {
@@ -56,7 +56,7 @@ final class StringEncryptTwoAttribute implements AttributeInterface
 
         $passwordLength = unpack('C', substr($password, 0, 2));
 
-        return substr($password, 2, $passwordLength);
+        return substr($password, 2, intval($passwordLength));
     }
 
     /**
