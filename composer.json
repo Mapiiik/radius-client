@@ -1,7 +1,8 @@
 {
     "name": "mapik/radius-client",
-    "type": "library",
     "description": "A PHP RADIUS client implementation",
+    "type": "library",
+    "homepage": "https://github.com/Mapiiik/radius-client",
     "keywords": [
         "RADIUS"
     ],
@@ -12,6 +13,10 @@
             "email": "jonas@stendahl.me"
         }
     ],
+    "support": {
+        "issues": "https://github.com/Mapiiik/radius-client/issues",
+        "source": "https://github.com/Mapiiik/radius-client"
+    },
     "require": {
         "php": ">=7.4",
         "ext-sockets": "*",
@@ -47,9 +52,5 @@
         "psr-4": {
             "Mapik\\RadiusClient\\Tests\\": "tests/"
         }
-    },
-    "support": {
-        "issues": "https://github.com/Mapiiik/radius-client/issues",
-        "source": "https://github.com/Mapiiik/radius-client"
     }
 }
