@@ -20,7 +20,7 @@ final class DateAttribute implements AttributeInterface
      *
      * @return \DateTimeImmutable
      */
-    public static function decode($message, $authenticator, $secret, array $options = null)
+    public static function decode($message, $authenticator, $secret, ?array $options = null)
     {
         $timestamp = array_sum(unpack('N', $message));
 
@@ -32,7 +32,7 @@ final class DateAttribute implements AttributeInterface
      *
      * @param \DateTimeInterface $value
      */
-    public static function encode($value, $authenticator, $secret, array $options = null)
+    public static function encode($value, $authenticator, $secret, ?array $options = null)
     {
         if (false === $value instanceof \DateTimeImmutable) {
             throw new InvalidArgumentException('Value must implement interface DateTimeInterface');

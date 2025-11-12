@@ -20,7 +20,7 @@ final class IpAddressAttribute implements AttributeInterface
      *
      * @return string
      */
-    public static function decode($message, $authenticator, $secret, array $options = null)
+    public static function decode($message, $authenticator, $secret, ?array $options = null)
     {
         return inet_ntop($message);
     }
@@ -30,7 +30,7 @@ final class IpAddressAttribute implements AttributeInterface
      *
      * @param string $value
      */
-    public static function encode($value, $authenticator, $secret, array $options = null)
+    public static function encode($value, $authenticator, $secret, ?array $options = null)
     {
         return inet_pton($value);
     }

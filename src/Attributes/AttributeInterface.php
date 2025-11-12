@@ -25,7 +25,7 @@ interface AttributeInterface
      *
      * @return mixed
      */
-    public static function decode($message, $authenticator, $secret, array $options = null);
+    public static function decode($message, $authenticator, $secret, ?array $options = null);
 
     /**
      * @param mixed      $value
@@ -37,5 +37,5 @@ interface AttributeInterface
      *
      * @return string
      */
-    public static function encode($value, $authenticator, $secret, array $options = null);
+    public static function encode($value, $authenticator, $secret, ?array $options = null);
 }

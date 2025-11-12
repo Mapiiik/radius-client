@@ -20,7 +20,7 @@ final class StringEncryptTwoAttribute implements AttributeInterface
      *
      * @return string
      */
-    public static function decode($message, $authenticator, $secret, array $options = null)
+    public static function decode($message, $authenticator, $secret, ?array $options = null)
     {
         $salt = substr($message, 0, 2);
         $message = substr($message, 2);
@@ -64,7 +64,7 @@ final class StringEncryptTwoAttribute implements AttributeInterface
      *
      * @param string $value
      */
-    public static function encode($value, $authenticator, $secret, array $options = null)
+    public static function encode($value, $authenticator, $secret, ?array $options = null)
     {
         $salt = random_bytes(2);
         $password = $value;

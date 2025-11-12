@@ -18,7 +18,7 @@ final class IntegerAttribute implements AttributeInterface
      *
      * @return int
      */
-    public static function decode($message, $authenticator, $secret, array $options = null)
+    public static function decode($message, $authenticator, $secret, ?array $options = null)
     {
         return intval(array_sum(unpack('N', $message)));
     }
@@ -28,7 +28,7 @@ final class IntegerAttribute implements AttributeInterface
      *
      * @param int $value
      */
-    public static function encode($value, $authenticator, $secret, array $options = null)
+    public static function encode($value, $authenticator, $secret, ?array $options = null)
     {
         return pack('N', $value);
     }

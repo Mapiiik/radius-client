@@ -25,7 +25,7 @@ final class PacketEncoder
      */
     private $attributes;
 
-    public function __construct(AttributeEncoder $attributeEncoder = null)
+    public function __construct(?AttributeEncoder $attributeEncoder = null)
     {
         if (null === $attributeEncoder) {
             $attributeEncoder = new AttributeEncoder();

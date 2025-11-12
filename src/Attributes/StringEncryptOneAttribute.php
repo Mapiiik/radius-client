@@ -20,7 +20,7 @@ final class StringEncryptOneAttribute implements AttributeInterface
      *
      * @return string
      */
-    public static function decode($message, $authenticator, $secret, array $options = null)
+    public static function decode($message, $authenticator, $secret, ?array $options = null)
     {
         $messageLength = strlen($message);
 
@@ -60,7 +60,7 @@ final class StringEncryptOneAttribute implements AttributeInterface
      *
      * @param string $value
      */
-    public static function encode($value, $authenticator, $secret, array $options = null)
+    public static function encode($value, $authenticator, $secret, ?array $options = null)
     {
         $password = $value;
 

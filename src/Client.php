@@ -37,7 +37,7 @@ final class Client
      * @param null|float         $timeout
      * @param null|PacketEncoder $encoder
      */
-    public function __construct($address, $timeout = null, PacketEncoder $encoder = null)
+    public function __construct($address, $timeout = null, ?PacketEncoder $encoder = null)
     {
         if (null === $encoder) {
             $encoder = new PacketEncoder();
