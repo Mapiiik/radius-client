@@ -11,6 +11,8 @@
 
 namespace Mapik\RadiusClient\Attributes;
 
+use Override;
+
 final class IntegerAttribute implements AttributeInterface
 {
     /**
@@ -18,6 +20,7 @@ final class IntegerAttribute implements AttributeInterface
      *
      * @return int
      */
+    #[Override]
     public static function decode($message, $authenticator, $secret, ?array $options = null)
     {
         return intval(array_sum(unpack('N', $message)));
@@ -28,6 +31,7 @@ final class IntegerAttribute implements AttributeInterface
      *
      * @param int $value
      */
+    #[Override]
     public static function encode($value, $authenticator, $secret, ?array $options = null)
     {
         return pack('N', $value);

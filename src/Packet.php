@@ -77,6 +77,8 @@ final class Packet
      * @throws AttributeException
      *
      * @return array
+     * 
+     * @psalm-suppress PossiblyUnusedMethod
      */
     public function getAttribute($attribute)
     {
@@ -93,6 +95,8 @@ final class Packet
      * @throws AttributeException
      *
      * @return string
+     * 
+     * @psalm-suppress PossiblyUnusedMethod
      */
     public function getAttributeString($attribute)
     {
@@ -149,6 +153,8 @@ final class Packet
      * @throws AttributeException
      *
      * @return mixed
+     * 
+     * @psalm-suppress PossiblyUnusedMethod
      */
     public function getUniqueAttribute($attribute)
     {

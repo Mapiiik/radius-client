@@ -12,6 +12,7 @@
 namespace Mapik\RadiusClient\Attributes;
 
 use Mapik\RadiusClient\Exceptions\InvalidArgumentException;
+use Override;
 
 final class DateAttribute implements AttributeInterface
 {
@@ -20,6 +21,7 @@ final class DateAttribute implements AttributeInterface
      *
      * @return \DateTimeImmutable
      */
+    #[Override]
     public static function decode($message, $authenticator, $secret, ?array $options = null)
     {
         $timestamp = array_sum(unpack('N', $message));
@@ -32,6 +34,7 @@ final class DateAttribute implements AttributeInterface
      *
      * @param \DateTimeInterface $value
      */
+    #[Override]
     public static function encode($value, $authenticator, $secret, ?array $options = null)
     {
         if (false === $value instanceof \DateTimeImmutable) {

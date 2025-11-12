@@ -13,6 +13,7 @@ namespace Mapik\RadiusClient\Dictionary;
 
 use Mapik\RadiusClient\Attributes;
 use Mapik\RadiusClient\DictionaryInterface;
+use Override;
 
 final class Rfc4679 implements DictionaryInterface
 {
@@ -288,6 +289,7 @@ final class Rfc4679 implements DictionaryInterface
     /**
      * {@inheritdoc}
      */
+    #[Override]
     public function getAttributes()
     {
         return self::$attributes;
@@ -296,6 +298,7 @@ final class Rfc4679 implements DictionaryInterface
     /**
      * {@inheritdoc}
      */
+    #[Override]
     public function getVendors()
     {
         return self::$vendors;

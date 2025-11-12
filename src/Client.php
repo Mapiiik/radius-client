@@ -15,6 +15,9 @@ use Mapik\RadiusClient\Exceptions\ClientException;
 use Socket\Raw\Factory;
 use Socket\Raw\Socket;
 
+/**
+ * @psalm-suppress UnusedClass
+ */
 final class Client
 {
     /**

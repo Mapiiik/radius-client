@@ -11,6 +11,8 @@
 
 namespace Mapik\RadiusClient\Attributes;
 
+use Override;
+
 final class OctetsAttribute implements AttributeInterface
 {
     const OPTION_SIZE = 0;
@@ -20,6 +22,7 @@ final class OctetsAttribute implements AttributeInterface
      *
      * @return string
      */
+    #[Override]
     public static function decode($message, $authenticator, $secret, ?array $options = null)
     {
         return $message;
@@ -30,6 +33,7 @@ final class OctetsAttribute implements AttributeInterface
      *
      * @param string $value
      */
+    #[Override]
     public static function encode($value, $authenticator, $secret, ?array $options = null)
     {
         return $value;

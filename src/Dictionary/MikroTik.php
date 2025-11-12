@@ -13,6 +13,7 @@ namespace Mapik\RadiusClient\Dictionary;
 
 use Mapik\RadiusClient\Attributes;
 use Mapik\RadiusClient\DictionaryInterface;
+use Override;
 
 final class MikroTik implements DictionaryInterface
 {
@@ -361,6 +362,7 @@ final class MikroTik implements DictionaryInterface
     /**
      * {@inheritdoc}
      */
+    #[Override]
     public function getAttributes()
     {
         return self::$attributes;
@@ -369,6 +371,7 @@ final class MikroTik implements DictionaryInterface
     /**
      * {@inheritdoc}
      */
+    #[Override]
     public function getVendors()
     {
         return self::$vendors;
