@@ -25,13 +25,13 @@ final class Rfc3580 implements DictionaryInterface
     const TUNNEL_TYPE_VLAN = 13;
 
     /**
-     * @var array[]
+     * @var array<array-key, array<string, mixed>>
      */
     private static $attributes = [
     ];
 
     /**
-     * @var array[]
+     * @var array<array-key, array<string, mixed>>
      */
     private static $vendors = [
     ];

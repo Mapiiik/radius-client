@@ -47,7 +47,7 @@ final class Rfc2868 implements DictionaryInterface
     const TUNNEL_MEDIUM_TYPE_E_164_NSAP = 15;
 
     /**
-     * @var array[]
+     * @var array<array-key, array<string, mixed>>
      */
     private static $attributes = [
         [
@@ -163,7 +163,7 @@ final class Rfc2868 implements DictionaryInterface
     ];
 
     /**
-     * @var array[]
+     * @var array<array-key, array<string, mixed>>
      */
     private static $vendors = [
     ];

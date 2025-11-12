@@ -18,7 +18,7 @@ use Override;
 final class Rfc4072 implements DictionaryInterface
 {
     /**
-     * @var array[]
+     * @var array<array-key, array<string, mixed>>
      */
     private static $attributes = [
         [
@@ -35,7 +35,7 @@ final class Rfc4072 implements DictionaryInterface
     ];
 
     /**
-     * @var array[]
+     * @var array<array-key, array<string, mixed>>
      */
     private static $vendors = [
     ];

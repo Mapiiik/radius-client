@@ -19,7 +19,7 @@ interface AttributeInterface
      * @param string     $message
      * @param string     $authenticator
      * @param string     $secret
-     * @param null|array $options
+     * @param null|array<string, mixed> $options
      *
      * @throws InvalidArgumentException
      *
@@ -31,7 +31,7 @@ interface AttributeInterface
      * @param mixed      $value
      * @param string     $authenticator
      * @param string     $secret
-     * @param null|array $options
+     * @param null|array<string, mixed> $options
      *
      * @throws InvalidArgumentException
      *

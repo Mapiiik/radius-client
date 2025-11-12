@@ -25,7 +25,7 @@ final class Rfc2867 implements DictionaryInterface
     const ACCT_STATUS_TYPE_TUNNEL_LINK_REJECT = 14;
 
     /**
-     * @var array[]
+     * @var array<array-key, array<string, mixed>>
      */
     private static $attributes = [
         [
@@ -53,7 +53,7 @@ final class Rfc2867 implements DictionaryInterface
     ];
 
     /**
-     * @var array[]
+     * @var array<array-key, array<string, mixed>>
      */
     private static $vendors = [
     ];

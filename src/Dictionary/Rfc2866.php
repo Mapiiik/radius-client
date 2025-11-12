@@ -48,7 +48,7 @@ final class Rfc2866 implements DictionaryInterface
     const ACCT_TERMINATE_CAUSE_HOST_REQUEST = 18;
 
     /**
-     * @var array[]
+     * @var array<array-key, array<string, mixed>>
      */
     private static $attributes = [
         [
@@ -186,7 +186,7 @@ final class Rfc2866 implements DictionaryInterface
     ];
 
     /**
-     * @var array[]
+     * @var array<array-key, array<string, mixed>>
      */
     private static $vendors = [
     ];

@@ -24,7 +24,7 @@ final class MikroTik implements DictionaryInterface
     const MIKROTIK_WIRELESS_ENC_ALGO_TKIP = 4;
 
     /**
-     * @var array[]
+     * @var array<array-key, array<string, mixed>>
      */
     private static $attributes = [
         [
@@ -350,7 +350,7 @@ final class MikroTik implements DictionaryInterface
     ];
 
     /**
-     * @var array[]
+     * @var array<array-key, array<string, mixed>>
      */
     private static $vendors = [
         [

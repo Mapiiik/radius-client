@@ -24,7 +24,7 @@ final class Rfc2869 implements DictionaryInterface
     const PROMPT_ECHO = 1;
 
     /**
-     * @var array[]
+     * @var array<array-key, array<string, mixed>>
      */
     private static $attributes = [
         [
@@ -231,7 +231,7 @@ final class Rfc2869 implements DictionaryInterface
     ];
 
     /**
-     * @var array[]
+     * @var array<array-key, array<string, mixed>>
      */
     private static $vendors = [
     ];

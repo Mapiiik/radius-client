@@ -23,13 +23,13 @@ final class Rfc4603 implements DictionaryInterface
     const NAS_PORT_TYPE_PPPOEOQINQ = 34;
 
     /**
-     * @var array[]
+     * @var array<array-key, array<string, mixed>>
      */
     private static $attributes = [
     ];
 
     /**
-     * @var array[]
+     * @var array<array-key, array<string, mixed>>
      */
     private static $vendors = [
     ];

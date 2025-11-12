@@ -45,7 +45,7 @@ final class Packet
      * @param string               $secret
      * @param array<string, mixed> $attributes
      * @param null|string          $authenticator
-     * @param null|string          $identifier
+     * @param null|int             $identifier
      */
     public function __construct(
         PacketType $type,
@@ -76,7 +76,7 @@ final class Packet
      *
      * @throws AttributeException
      *
-     * @return array
+     * @return mixed
      * 
      * @psalm-suppress PossiblyUnusedMethod
      */

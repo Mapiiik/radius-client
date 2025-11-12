@@ -14,12 +14,12 @@ namespace Mapik\RadiusClient;
 interface DictionaryInterface
 {
     /**
-     * @return array[]
+     * @return array<array-key, array<string, mixed>>
      */
     public function getAttributes();
 
     /**
-     * @return array[]
+     * @return array<array-key, array<string, mixed>>
      */
     public function getVendors();
 }

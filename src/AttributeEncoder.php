@@ -24,27 +24,27 @@ final class AttributeEncoder
     const VENDOR_SPECIFIC_ATTRIBUTE = 26;
 
     /**
-     * @var array[]
+     * @var array<array-key, array<string, mixed>>
      */
     private $attributes = [];
 
     /**
-     * @var array<string, array>
+     * @var array<array-key, array<string, mixed>>
      */
     private $attributeNameLookup = [];
 
     /**
-     * @var array<int, array>
+     * @var array<array-key, array<string, mixed>>
      */
     private $attributeTypeLookup = [];
 
     /**
-     * @var array<int, array>
+     * @var array<array-key, array<string, mixed>>
      */
     private $vendors = [];
 
     /**
-     * @var array<int, array>
+     * @var array<array-key, array<string, mixed>>
      */
     private $vendorTypeLookup = [];
 

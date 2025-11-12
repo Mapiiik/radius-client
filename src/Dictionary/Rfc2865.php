@@ -77,7 +77,7 @@ final class Rfc2865 implements DictionaryInterface
     const NAS_PORT_TYPE_WIRELESS_802_11 = 19;
 
     /**
-     * @var array[]
+     * @var array<array-key, array<string, mixed>>
      */
     private static $attributes = [
         [
@@ -539,7 +539,7 @@ final class Rfc2865 implements DictionaryInterface
     ];
 
     /**
-     * @var array[]
+     * @var array<array-key, array<string, mixed>>
      */
     private static $vendors = [
     ];

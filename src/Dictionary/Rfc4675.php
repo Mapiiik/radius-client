@@ -21,7 +21,7 @@ final class Rfc4675 implements DictionaryInterface
     const INGRESS_FILTERS_DISABLED = 2;
 
     /**
-     * @var array[]
+     * @var array<array-key, array<string, mixed>>
      */
     private static $attributes = [
         [
@@ -71,7 +71,7 @@ final class Rfc4675 implements DictionaryInterface
     ];
 
     /**
-     * @var array[]
+     * @var array<array-key, array<string, mixed>>
      */
     private static $vendors = [
     ];

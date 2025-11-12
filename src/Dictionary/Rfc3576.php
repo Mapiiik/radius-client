@@ -35,7 +35,7 @@ final class Rfc3576 implements DictionaryInterface
     const ERROR_CAUSE_REQUEST_INITIATED = 507;
 
     /**
-     * @var array[]
+     * @var array<array-key, array<string, mixed>>
      */
     private static $attributes = [
         [
@@ -52,7 +52,7 @@ final class Rfc3576 implements DictionaryInterface
     ];
 
     /**
-     * @var array[]
+     * @var array<array-key, array<string, mixed>>
      */
     private static $vendors = [
     ];

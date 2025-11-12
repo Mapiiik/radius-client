@@ -20,13 +20,13 @@ final class Rfc5176 implements DictionaryInterface
     const ERROR_CAUSE_MULTIPLE_SESSION_SELECTION_UNSUPPORTED = 508;
 
     /**
-     * @var array[]
+     * @var array<array-key, array<string, mixed>>
      */
     private static $attributes = [
     ];
 
     /**
-     * @var array[]
+     * @var array<array-key, array<string, mixed>>
      */
     private static $vendors = [
     ];
