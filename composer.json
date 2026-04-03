@@ -21,8 +21,7 @@
         "php": ">=7.4",
         "ext-sockets": "*",
         "clue/socket-raw": "^1.6",
-        "marc-mabe/php-enum": "^4.0",
-        "paragonie/random_compat": "^2.0"
+        "marc-mabe/php-enum": "^4.0"
     },
     "require-dev": {
         "phpstan/phpstan": "^1.0",
